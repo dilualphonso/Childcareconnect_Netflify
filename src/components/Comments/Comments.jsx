@@ -79,7 +79,7 @@ function Comments({ comments, setComments }) {
         text: "Thank you for submitting.",
         icon: "success",
       }).then(function () {
-        window.location.href = `${BASE_URL}/daycares/${id}`;
+        window.location.href = `https://endearing-salamander-3ce910.netlify.app/daycares/${id}`;
       });
     } catch (error) {
       console.error("Error submitting video:", error);
