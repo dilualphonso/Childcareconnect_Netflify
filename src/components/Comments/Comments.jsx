@@ -68,7 +68,7 @@ function Comments({ comments, setComments }) {
     }
 
     try {
-      await axios.post(`http://localhost:8080/api/daycares/${id}/reviews`, {
+      await axios.post(`${BASE_URL}/daycares/${id}/reviews`, {
         comment: review,
         rating: rating,
         reviewer_name: fullName,
@@ -79,7 +79,7 @@ function Comments({ comments, setComments }) {
         text: "Thank you for submitting.",
         icon: "success",
       }).then(function () {
-        window.location.href = `http://localhost:3000/daycares/${id}`;
+        window.location.href = `${BASE_URL}/daycares/${id}`;
       });
     } catch (error) {
       console.error("Error submitting video:", error);
